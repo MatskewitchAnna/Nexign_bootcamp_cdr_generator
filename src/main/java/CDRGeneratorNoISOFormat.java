@@ -1,13 +1,14 @@
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
-import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
 public class CDRGeneratorNoISOFormat {
 
     private static final Random random = new Random();
+
+    // указываем в формате не ISO8601
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 
     public static void main(String[] args) {
@@ -45,7 +46,7 @@ public class CDRGeneratorNoISOFormat {
         LocalDateTime startTime = LocalDateTime.now().minusDays(random.nextInt(30)).minusMinutes(random.nextInt(60 * 24));
         LocalDateTime endTime = startTime.plusMinutes(duration);
 
-        // Форматируем время в ISO 8601
+        // Форматируем время
         String startTimeStr = startTime.format(formatter);
         String endTimeStr = endTime.format(formatter);
 
