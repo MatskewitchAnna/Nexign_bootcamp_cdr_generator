@@ -5,19 +5,19 @@ import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
-public class CDRGenIncorrectStartEndTime {
+public class CDRGeneratorNoISOFormat {
+
     private static final Random random = new Random();
-    private static final DateTimeFormatter formatter = DateTimeFormatter.ISO_DATE_TIME;
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 
     public static void main(String[] args) {
         // Генерируем всего 10 записей
-        try (FileWriter writer = new FileWriter("cdr_invalid_start_end_time.txt")) {
+        try (FileWriter writer = new FileWriter("cdr_no_ISO8601_format.txt")) {
             for (int i = 0; i < 10; i++) {
-                generateCallData(writer, 1, 60);
+                generateCallData(writer, 2, 48);
             }
 
-            System.out.println("Генерация тестовых данных с неправильным временем начала и окончания звонка завершена. Записи сохранены в cdr_invalid_start_end_time.txt.");
-
+            System.out.println("Генерация тестовых данных с датой не в формате ISO8601 завершена. Записи сохранены в cdr_no_ISO8601_format.txt.");
         } catch (IOException e) {
             System.out.println("Ошибка записи в файл: " + e.getMessage());
         }
@@ -45,9 +45,9 @@ public class CDRGenIncorrectStartEndTime {
         LocalDateTime startTime = LocalDateTime.now().minusDays(random.nextInt(30)).minusMinutes(random.nextInt(60 * 24));
         LocalDateTime endTime = startTime.plusMinutes(duration);
 
-        // Форматируем время в ISO 8601 и меняем местами дату начала и окончания звонка
-        String startTimeStr = endTime.atZone(ZoneOffset.UTC).format(formatter);
-        String endTimeStr = startTime.atZone(ZoneOffset.UTC).format(formatter);
+        // Форматируем время в ISO 8601
+        String startTimeStr = startTime.format(formatter);
+        String endTimeStr = endTime.format(formatter);
 
         // Записываем данные в файл (зависит от реализации, тут запись по структуре JSON)
         writer.write(String.format("{\n" +

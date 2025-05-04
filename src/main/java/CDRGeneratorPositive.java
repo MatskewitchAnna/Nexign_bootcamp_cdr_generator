@@ -9,7 +9,6 @@ public class CDRGeneratorPositive {
 
     private static final Random random = new Random();
     private static final DateTimeFormatter formatter = DateTimeFormatter.ISO_DATE_TIME;
-    // или DateTimeFormatter.ofPattern("yyyy-MM-dd.HH:mm:ss"), если в реализации принято решение не отображать часовой пояс
 
     public static void main(String[] args) {
         // Генерируем всего 10 записей

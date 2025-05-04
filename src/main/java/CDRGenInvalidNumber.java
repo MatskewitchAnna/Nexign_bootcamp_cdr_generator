@@ -9,7 +9,6 @@ public class CDRGenInvalidNumber {
 
     private static final Random random = new Random();
     private static final DateTimeFormatter formatter = DateTimeFormatter.ISO_DATE_TIME;
-    // или DateTimeFormatter.ofPattern("yyyy-MM-dd.HH:mm:ss"), если в реализации принято решение не отображать часовой пояс
 
     public static void main(String[] args) {
         // Генерируем всего 10 записей
@@ -28,8 +27,8 @@ public class CDRGenInvalidNumber {
 
     private static void generateCallData(FileWriter writer, int minDuration, int maxDuration) throws IOException {
         // Массивы невалидных номеров абонентов
-        String[] outcomingNum = {"790011", "7900222", "7900", "790044455", ""};
-        String[] incomingNum = {"790011", "7900222", "7900", "790044455", ""};
+        String[] outcomingNum = {"790011", "7900222", "7900", "790044455", "790055544"};
+        String[] incomingNum = {"790011", "7900222", "7900", "790044455","790055544"};
 
         String outcomingMsisdn, incomingMsisdn;
         do {
