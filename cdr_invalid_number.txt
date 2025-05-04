@@ -1,0 +1,60 @@
+{
+"outcoming_msisdn": "790044455",
+"incoming_msisdn": "",
+"start_time": "2025-04-20T10:57:05.1228317Z",
+"end_time": "2025-04-20T11:12:05.1228317Z"
+},
+{
+"outcoming_msisdn": "790044455",
+"incoming_msisdn": "7900",
+"start_time": "2025-04-25T15:57:05.1468322Z",
+"end_time": "2025-04-25T16:54:05.1468322Z"
+},
+{
+"outcoming_msisdn": "7900222",
+"incoming_msisdn": "790044455",
+"start_time": "2025-04-23T09:44:05.1468322Z",
+"end_time": "2025-04-23T10:02:05.1468322Z"
+},
+{
+"outcoming_msisdn": "",
+"incoming_msisdn": "7900",
+"start_time": "2025-04-19T16:25:05.1468322Z",
+"end_time": "2025-04-19T16:56:05.1468322Z"
+},
+{
+"outcoming_msisdn": "7900222",
+"incoming_msisdn": "790011",
+"start_time": "2025-04-05T19:59:05.1478321Z",
+"end_time": "2025-04-05T20:28:05.1478321Z"
+},
+{
+"outcoming_msisdn": "790011",
+"incoming_msisdn": "",
+"start_time": "2025-04-15T07:53:05.1478321Z",
+"end_time": "2025-04-15T08:00:05.1478321Z"
+},
+{
+"outcoming_msisdn": "",
+"incoming_msisdn": "790011",
+"start_time": "2025-05-02T10:33:05.1478321Z",
+"end_time": "2025-05-02T10:48:05.1478321Z"
+},
+{
+"outcoming_msisdn": "7900",
+"incoming_msisdn": "790011",
+"start_time": "2025-04-21T13:27:05.1478321Z",
+"end_time": "2025-04-21T13:48:05.1478321Z"
+},
+{
+"outcoming_msisdn": "7900222",
+"incoming_msisdn": "7900",
+"start_time": "2025-04-14T08:13:05.1488321Z",
+"end_time": "2025-04-14T08:25:05.1488321Z"
+},
+{
+"outcoming_msisdn": "",
+"incoming_msisdn": "790044455",
+"start_time": "2025-04-15T22:15:05.1488321Z",
+"end_time": "2025-04-15T23:07:05.1488321Z"
+},
